@@ -1,0 +1,15 @@
+<!-- app/views/teddies/index.html.erb -->
+<div class="container">
+  <h1>Teddies</h1>
+  <div class="row">
+    <% @teddies.each do |teddy| %>
+      <div class="col-sm-6 col-md-4">
+        <%= image_tag(teddy.photo_url, class: "img-thumbnail") %>
+        <div class="caption">
+          <h3><%= link_to teddy.name, teddy_path(teddy) %></h3>
+          <p>Amount: <%= humanized_money_with_symbol(teddy.price) %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

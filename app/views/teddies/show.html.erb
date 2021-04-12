@@ -1,0 +1,17 @@
+<!-- app/views/teddies/show.html.erb -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @teddy.name %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <%= image_tag(@teddy.photo_url, width: '100%') %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <p>Some awesome description of our amazing teddy.</p>
+      <p>Amount: <%= humanized_money_with_symbol(@teddy.price) %></p>
+    </div>
+  </div>
+</div>
